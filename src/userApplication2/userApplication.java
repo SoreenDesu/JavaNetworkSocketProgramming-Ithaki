@@ -14,7 +14,7 @@ import java.nio.*;
 
 public class userApplication {
 	
-	static final int serverPort = 38000; 
+    static final int serverPort = 38000; 
     static final int clientPort = 48000; 
     static final String echoRequest = "EXXXX"; 
     static final String imageRequest = "MXXXX"; 
