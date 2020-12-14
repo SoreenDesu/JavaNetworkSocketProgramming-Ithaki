@@ -344,16 +344,16 @@ public class userApplication {
     }
 	
     
-	/**
-	 * Function to receive a song or a frequency based on DPCM compression pattern. Makes files of Subtractions and Samples in both cases.
-	 * @param audioMode Indicates what kind of audio will be received. Thus it should be only given values "Song" and "Frequency".
-	 * @param numberOfPackets Indicates the number of packets that can be received, with a cap of 999 packets.
-	 * @param distinguishAttribute Indicates a String to be added to the file name, so that an existing file is not overridden, in case of multiple calls of the function.
-	 * @throws SocketException If the socket cannot be opened, or if it is already in use.
+     /**
+     * Function to receive a song or a frequency based on DPCM compression pattern. Makes files of Subtractions and Samples in both cases.
+     * @param audioMode Indicates what kind of audio will be received. Thus it should be only given values "Song" and "Frequency".
+     * @param numberOfPackets Indicates the number of packets that can be received, with a cap of 999 packets.
+     * @param distinguishAttribute Indicates a String to be added to the file name, so that an existing file is not overridden, in case of multiple calls of the function.
+     * @throws SocketException If the socket cannot be opened, or if it is already in use.
      * @throws IOException If there is a file writing issue met.
      * @throws UnknownHostException If there is an issue with the serverPublicAddress later given.
-	 * @throws LineUnavailableException If the requested line cannot be reached, or if it is already in use.
-	 */
+     * @throws LineUnavailableException If the requested line cannot be reached, or if it is already in use.
+     */
 	
     static final void receiveAudioDPCM(final String audioMode, final int numberOfPackets, final String distinguishAttribute) throws SocketException, IOException, 
     																									UnknownHostException,LineUnavailableException{
@@ -495,12 +495,12 @@ public class userApplication {
      * Function to receive a song on AQDPCM compression pattern. AQDPCM doesn't work on Frequencies, but is still defined for a feeling of completion.
      * Makes files of Bs, Means, Subtractions and Samples in both cases.
      * @param audioMode Indicates what kind of audio will be received. Thus it should be only given values "Song" and "Frequency".
-	 * @param numberOfPackets Indicates the number of packets that can be received, with a cap of 999 packets.
-	 * @param distinguishAttribute Indicates a String to be added to the file name, so that an existing file is not overridden, in case of multiple calls of the function
-	 * @throws SocketException If the socket cannot be opened, or if it is already in use.
+     * @param numberOfPackets Indicates the number of packets that can be received, with a cap of 999 packets.
+     * @param distinguishAttribute Indicates a String to be added to the file name, so that an existing file is not overridden, in case of multiple calls of the function
+     * @throws SocketException If the socket cannot be opened, or if it is already in use.
      * @throws IOException If there is a file writing issue met.
      * @throws UnknownHostException If there is an issue with the serverPublicAddress later given.
-	 * @throws LineUnavailableException If the requested line cannot be reached, or if it is already in use.
+     * @throws LineUnavailableException If the requested line cannot be reached, or if it is already in use.
      */
     
     static final void receiveAudioAQDPCM(final String audioMode, final int numberOfPackets, final String distinguishAttribute) throws SocketException, IOException, 
@@ -717,7 +717,7 @@ public class userApplication {
      * @throws SocketException If the socket cannot be opened, or if it is already in use.
      * @throws IOException If there is a file writing issue met.
      * @throws UnknownHostException If there is an issue with the serverPublicAddress later given.
-	 * @throws LineUnavailableException If the requested line cannot be reached, or if it is already in use.
+     * @throws LineUnavailableException If the requested line cannot be reached, or if it is already in use.
      * @throws ClassNotFoundException - If class named throughout the function, cannot be found.
      */
     
@@ -770,7 +770,7 @@ public class userApplication {
      * @throws SocketException If the socket cannot be opened, or if it is already in use.
      * @throws IOException If there is a file writing issue met.
      * @throws UnknownHostException If there is an issue with the serverPublicAddress later given.
-	 * @throws LineUnavailableException If the requested line cannot be reached, or if it is already in use.
+     * @throws LineUnavailableException If the requested line cannot be reached, or if it is already in use.
      * @throws ClassNotFoundException - If class named through the function, cannot be found.
      */
     
