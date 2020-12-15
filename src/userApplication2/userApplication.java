@@ -780,8 +780,8 @@ public class userApplication {
         String vehicleRequestCode = " ";
         String messageReceived = " ";
         StringBuilder vehicleStringBuilder = new StringBuilder();
-        double beginLoop = 0;
-        double finishloop = 0;
+        double timeStart = 0;
+        double timeEnd = 0;
         byte[] serverPublicAddress = {(byte)155, (byte)207, (byte) 18, (byte)208};
         InetAddress hostAddress = InetAddress.getByAddress(serverPublicAddress);
         DatagramSocket vehicleSendSocket = new DatagramSocket();
@@ -789,7 +789,7 @@ public class userApplication {
         byte[] vehicleReceiveBuffer = new byte[5000];
         DatagramPacket vehicleReceivePacket = new DatagramPacket(vehicleReceiveBuffer, vehicleReceiveBuffer.length);
         vehicleReceiveSocket.setSoTimeout(5000);
-        beginLoop = System.nanoTime();
+        timeStart = System.nanoTime();
         while(finishloop < 4 * 60 * 1000) {
         	String[] pidArray = {engineRunTime, intakeAirTemperature, throttlePosition, engineRPM, vehicleSpeed, coolantTemperature};
         	for(String i: pidArray) {
@@ -856,8 +856,9 @@ public class userApplication {
         }
         	vehicleStringBuilder.append("\n");
         	System.out.println();
-        	finishloop = (System.nanoTime() - beginLoop) / 1000000;
+        	timeEnd = (System.nanoTime() - timeStart) / 1000000;
         }
+														   
         BufferedWriter vehicleBufferedWriter = null;
         try {
             File file = new File("vehicle.csv");
